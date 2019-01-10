@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 50% 1fr;
+  align-items: center;
+  align-content: center;
+  height: 100vh;
+  .form {
+    position: relative;
+    opacity: 1;
+    display: grid;
+    grid-row-gap: 10px;
+    background: #3a7b9c;
+    padding: 10%;
+    grid-column: 2 / span 1;
+    input {
+      text-align: center;
+    }
+  }
+
+  h2 {
+    color: white;
+    text-align: center;
+  }
+}

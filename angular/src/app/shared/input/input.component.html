@@ -1,0 +1,17 @@
+<div class="from-group">
+  <label class="label-control" *ngIf="label">
+    {{ label }}
+  </label>
+  <input
+    type="{{type}}"
+    class="form-control"
+    formControlName="control"
+    [ngClass]="{
+      'form-error': control.invalid && (control.dirty || control.touched),
+      'form-success': control.valid && (control.dirty || control.touched)
+    }"
+    (change)="changeInput()"
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+  />
+</div>

@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div class="form" [@fadeIn]="load">
+      <app-line-loader [isLoading]="isLoading"></app-line-loader>
+      <h2>Logo</h2>
+      <div class="form-group">
+        <label class="label-control">Usuario</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="username"
+          [ngClass]="{
+            'form-error':
+              username.invalid && (username.dirty || username.touched),
+            'form-success':
+              username.valid && (username.dirty || username.touched)
+          }"
+          placeholder="Ingrasa tus datos"
+        />
+      </div>
+      <div class="form-group">
+        <label class="label-control">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          [ngClass]="{
+            'form-error':
+              password.invalid && (password.dirty || password.touched),
+            'form-success':
+              password.valid && (password.dirty || password.touched)
+          }"
+          placeholder="contrasena"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Login</button>
+    </div>
+  </div>
+</form>

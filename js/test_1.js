@@ -19,9 +19,8 @@ function talky() {
 }
 
 // respuesta
-
+cat.speak = talk.bind(dog)
 cat.speak()
-// 'miau'
 
 // 2.- Dado el sgte array, retornar en un array solo los NOMBRES de las personas que donan órganos 
 // y que tienen 1 o más esposas, cuyo nombre de la esposa empieze con 'Y' o 'N'.

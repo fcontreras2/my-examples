@@ -42,11 +42,27 @@ cat.speak()
     esposas: []
   }
 ]
-
-//.filter(e => {
-  //let flag = e.esposas.filter(a => a.charAt(0) === 'Y' || a.charAt(0) === 'N')
-  //return flag.length > 0 && e.donacion;
-//}).map(e => e.name)
-
 // respuesta
+[
+  {
+    name: 'Pepe',
+    donacion: true,
+    esposas: ['Rosangela', 'Mayte']
+  },
+  {
+    name: 'Juan',
+    donacion: false,
+    esposas: ['Yahaira']
+  },
+  {
+    name: 'Lalo',
+    donacion: true,
+    esposas: []
+  }
+]
+.filter(e => {
+  if (!e.donacion) return false;
+  let esposas = e.esposas.filter(a => a.charAt(0) === 'Y' || a.charAt(0) === 'N')
+  return esposas.length > 0;
+}).map(e => e.name)
 
